@@ -15,5 +15,10 @@ func main() {
 	router := gin.Default()
 	router.GET("/ping", controllers.Users)
 	router.POST("/user", controllers.UserCreate)
+	router.PUT("/user/:id", controllers.UserUpdate)
+	router.GET("/users", controllers.UserIndex)
+	router.GET("/user/:id", controllers.UserShow)
+	router.DELETE("/user/:id", controllers.UserDelete)
+	
 	router.Run()
 }
